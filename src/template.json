@@ -1,0 +1,61 @@
+[
+	{
+		"horseName": "Agnes Tachyon",
+		"image": "gametora/urls/tachyon",
+		"uniqueSkills": [
+			{
+				"name": "in japanese",
+				"translatedName": "intro: watashi no bodii desu",
+				"description": "When corner etc",
+				"icon": "url",
+				"evolved": false
+			},
+			{
+				"name": "in japanese",
+				"translatedName": "U=ma",
+				"description": "When corner etc",
+				"icon": "url",
+				"evolved": true
+			}
+		],
+		"innateSkills": [
+			{
+				"name": "string (japanese)",
+				"translatedName": "Core distance",
+				"description": "become corner",
+				"icon": "url"
+			},
+			{
+				"name": "string (japanese)",
+				"translatedName": "fav place",
+				"description": "become corner",
+				"icon": "url"
+			},
+			{
+				"name": "string (japanese)",
+				"translatedName": "bondage",
+				"description": "become corner",
+				"icon": "url"
+			}
+		],
+		"awakeningSkills": [
+			{
+				"name": "string (japanese)",
+				"translatedName": "med dis str8",
+				"description": "descp",
+				"icon": "url",
+				"level": 2
+			},
+			{
+				"name": "string (japanese)",
+				"translatedName": "med dis str8",
+				"description": "descp",
+				"icon": "url",
+				"level": 3
+			}
+		]
+	},
+	{
+		"horseName": "zephyr"
+	}
+]
