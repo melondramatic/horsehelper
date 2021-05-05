@@ -13,6 +13,7 @@ const styles = makeStyles((theme) => ({
 		margin: '4px',
 		padding: '4px',
 		border: '3px transparent solid',
+		cursor: 'pointer',
 	},
 	supportCardPickerPlaceholder: {
 		height: '194px',
@@ -21,10 +22,14 @@ const styles = makeStyles((theme) => ({
 		flexDirection: 'column',
 		justifyContent: 'center',
 		alignItems: 'center',
-		backgroundColor: '#aaaaaa',
-		border: '3px dashed #eeeeee',
+		backgroundColor: '#888',
+		border: '3px dashed #eee',
 		borderRadius: '4px',
 		fontSize: '18px',
+
+		'&:hover': {
+			backgroundColor: '#696969',
+		},
 	},
 	selected: {
 		border: `3px solid ${theme.palette.primary.main}`,

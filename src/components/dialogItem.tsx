@@ -37,8 +37,8 @@ const styles = makeStyles({
 
 export const buildOptions = (options: Option[]) => {
 	const optionsArray = [] as JSX.Element[];
-	options.forEach((option) => {
-		const optionItem = <OptionItem option={option} />;
+	options.forEach((option, index) => {
+		const optionItem = <OptionItem key={index} option={option} />;
 		optionsArray.push(optionItem);
 	});
 	return optionsArray;

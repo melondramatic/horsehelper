@@ -24,8 +24,8 @@ const styles = makeStyles((theme) => ({
 
 const buildSkills = (skills: Skill[]) => {
 	const skillsArray = [] as JSX.Element[];
-	skills.forEach((skill) => {
-		const skillItem = <SkillItem skill={skill} />;
+	skills.forEach((skill, index) => {
+		const skillItem = <SkillItem key={index} skill={skill} />;
 		skillsArray.push(skillItem);
 	});
 

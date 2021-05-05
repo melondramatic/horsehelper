@@ -17,6 +17,7 @@ const styles = makeStyles({
 		flexDirection: 'column',
 		justifyContent: 'center',
 		alignItems: 'center',
+		marginBottom: '24px',
 	},
 	buttonGroup: {
 		marginBottom: '16px',

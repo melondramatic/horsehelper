@@ -21,8 +21,8 @@ const styles = makeStyles((theme) => ({
 
 const buildDialogs = (dialogs: Dialog[] | DialogEvent[]) => {
 	const dialogArray = [] as JSX.Element[];
-	dialogs.forEach((dialog) => {
-		const dialogItem = <DialogItem dialog={dialog} />;
+	dialogs.forEach((dialog, index) => {
+		const dialogItem = <DialogItem key={index} dialog={dialog} />;
 		dialogArray.push(dialogItem);
 	});
 

@@ -2,6 +2,7 @@ import { SetStateAction, useContext } from 'react';
 import { makeStyles } from '@material-ui/styles';
 import LoopIcon from '@material-ui/icons/Loop';
 import ClearIcon from '@material-ui/icons/Clear';
+import classNames from 'classnames';
 
 import { SupportCard } from '../../constants';
 import { SupportPageDataContext } from '../../pages/mainPage';
@@ -17,10 +18,10 @@ const styles = makeStyles({
 		width: '200px',
 		borderRadius: '8px',
 	},
-	loopIconContainer: {
+	buttonContainer: {
 		position: 'absolute',
 		bottom: 5,
-		left: 5,
+
 		backgroundColor: '#696969',
 		opacity: '0.7',
 		height: '45px',
@@ -28,18 +29,18 @@ const styles = makeStyles({
 		display: 'flex',
 		justifyContent: 'center',
 		alignItems: 'center',
+		borderRadius: '8px',
+
+		'&:hover': {
+			backgroundColor: '#333',
+			opacity: '0.85',
+		},
 	},
-	deleteIconContainer: {
-		position: 'absolute',
-		bottom: 5,
+	loopButton: {
+		left: 5,
+	},
+	deleteButton: {
 		right: 5,
-		backgroundColor: '#696969',
-		opacity: '0.7',
-		height: '45px',
-		width: '45px',
-		display: 'flex',
-		justifyContent: 'center',
-		alignItems: 'center',
 	},
 	icon: {
 		color: 'white',
@@ -70,7 +71,7 @@ const SupportPickerImage = (props: Props) => {
 				onClick={() => onClick()}
 			/>
 			<div
-				className={classes.loopIconContainer}
+				className={classNames(classes.buttonContainer, classes.loopButton)}
 				onClick={() => {
 					setIsOpen(true);
 				}}
@@ -78,7 +79,7 @@ const SupportPickerImage = (props: Props) => {
 				<LoopIcon className={classes.icon} fontSize={'large'} />
 			</div>
 			<div
-				className={classes.deleteIconContainer}
+				className={classNames(classes.buttonContainer, classes.deleteButton)}
 				onClick={() => {
 					setSelectedSupports({
 						...selectedSupports,
