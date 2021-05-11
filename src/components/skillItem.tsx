@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core';
+import SmsOutlinedIcon from '@material-ui/icons/SmsOutlined';
 
 import { Skill } from '../constants';
 
@@ -28,6 +29,12 @@ const styles = makeStyles((theme) => ({
 		justifyContent: 'center',
 		padding: '4px',
 	},
+	dialogIconContainer: {
+		display: 'flex',
+		flex: 1,
+		justifyContent: 'center',
+		alignItems: 'center',
+	},
 	skillTag: {
 		display: 'flex',
 		flex: 1,
@@ -38,7 +45,7 @@ const styles = makeStyles((theme) => ({
 	skillDescription: {
 		display: 'flex',
 		flexWrap: 'wrap',
-		flex: 6,
+		flex: 5,
 		justifyContent: 'center',
 		alignItems: 'center',
 		textAlign: 'center',
@@ -49,6 +56,7 @@ const SkillItem = (props: { skill: Skill }) => {
 	const classes = styles();
 
 	const { skill } = props;
+	console.log(skill);
 	return (
 		<div className={classes.skillContainer}>
 			<div className={classes.skillHeaderContainer}>
@@ -61,6 +69,9 @@ const SkillItem = (props: { skill: Skill }) => {
 					<div>{skill.japaneseName}</div>
 					<div>{skill.name}</div>
 				</div>
+			</div>
+			<div className={classes.dialogIconContainer}>
+				{skill.isDialog && <SmsOutlinedIcon />}
 			</div>
 			<div className={classes.skillTag}>{skill.tag}</div>
 			<div className={classes.skillDescription}>{skill.description}</div>

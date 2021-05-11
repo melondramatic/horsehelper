@@ -40,6 +40,7 @@ export interface Skill {
 	japaneseName: string;
 	name: string;
 	tag: string;
+	isDialog: boolean;
 }
 
 export interface Dialog {
